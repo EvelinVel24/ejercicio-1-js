@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar Números</title>
+</head>
+<body>
+    <h1>Comparar Números</h1>
+    <p>Ingresa dos números para comparar cuál es mayor:</p>
+    
+    <label for="numero1">Primer número:</label>
+    <input type="number" id="numero1" step="any">
+    <br><br>
+    
+    <label for="numero2">Segundo número:</label>
+    <input type="number" id="numero2" step="any">
+    <br><br>
+    
+    <button onclick="compararNumeros()">Comparar</button>
+
+    <script>
+        function compararNumeros() {
+            // Obtener los valores de los inputs
+            let numero1 = parseFloat(document.getElementById('numero1').value);
+            let numero2 = parseFloat(document.getElementById('numero2').value);
+            
+            let resultado;
+
+            // Comparar los números y asignar el resultado
+            if (numero1 > numero2) {
+                resultado = `Esta página dice: ${numero1} es mayor que ${numero2}.`;
+            } else if (numero1 < numero2) {
+                resultado = `Esta página dice: ${numero2} es mayor que ${numero1}.`;
+            } else {
+                resultado = `Esta página dice: Ambos números (${numero1} y ${numero2}) son iguales.`;
+            }
+
+            // Mostrar el resultado en una alerta
+            alert(resultado);
+        }
+    </script>
+</body>
+</html>
+
+
